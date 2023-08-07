@@ -1,0 +1,37 @@
+{
+  "name": "ip-address-tracker",
+  "version": "1.0.0",
+  "description": "This is a solution to the IP address tracker challenge on Frontend Mentor",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "postcss src/styles/main.css -o public/styles/main.min.css --watch",
+    "compile:scss": "sass --watch --no-source-map src/styles/sass/main.scss src/styles/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hassaneljebyly/ip-address-tracker.git"
+  },
+  "keywords": [
+    "api",
+    "frontend-mentor",
+    "css",
+    "scss",
+    "postcss"
+  ],
+  "author": "hassan el jebyly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hassaneljebyly/ip-address-tracker/issues"
+  },
+  "homepage": "https://github.com/hassaneljebyly/ip-address-tracker#readme",
+  "browserslist": [
+    "last 4 version"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "cssnano": "^6.0.1",
+    "postcss": "^8.4.27",
+    "postcss-cli": "^10.1.0",
+    "sass": "^1.64.2"
+  }
+}

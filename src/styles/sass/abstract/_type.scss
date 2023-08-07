@@ -1,0 +1,23 @@
+$type-scales: (
+  p: (100: clamp(0.51rem, -0.05vw + 0.52rem, 0.47rem),
+    200: clamp(0.64rem, -0.01vw + 0.64rem, 0.63rem),
+    300: clamp(0.8rem, 0.06vw + 0.79rem, 0.84rem),
+    400: clamp(1rem, 0.18vw + 0.96rem, 1.13rem),
+    500: clamp(1.25rem, 0.36vw + 1.18rem, 1.5rem),
+    600: clamp(1.56rem, 0.62vw + 1.44rem, 2rem),
+    700: clamp(1.95rem, 1.02vw + 1.75rem, 2.66rem),
+    800: clamp(2.44rem, 1.59vw + 2.12rem, 3.55rem),
+    900: clamp(3.05rem, 2.4vw + 2.57rem, 4.73rem),
+  ),
+);
+
+$type-faces: (
+  p: 'Rubik',
+);
+
+$weights: (
+  p: (regular: 400,
+    medium: 500,
+    bold: 700,
+  ),
+);

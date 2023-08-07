@@ -1,0 +1,41 @@
+@use "../abstract/mixins" as *;
+
+$button-color : hsl(0, 0%, 17%);
+
+.search {
+  width: 100%;
+  max-width: 557px;
+  border-radius: var(--border-radius);
+  margin-inline: auto;
+  overflow: hidden;
+
+  &__form {
+    width: 100%;
+    display: flex;
+  }
+
+  &__input {
+    width: 90%;
+    padding: 0.9em;
+    line-height: 0;
+
+    @include respond-to("small") {
+      font-size: var(--fs-p-300);
+    }
+  }
+
+  &__button {
+    width: 10%;
+    min-width: 50px;
+    aspect-ratio: 1;
+    display: grid;
+    place-content: center;
+    transform: translateX(2px);
+    cursor: pointer;
+    transition: background-color 150ms ease-in-out;
+
+    &:hover {
+      background-color: lighten($button-color, 10%);
+    }
+  }
+}

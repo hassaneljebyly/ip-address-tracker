@@ -1,0 +1,39 @@
+@use '../abstract/' as *;
+
+:root {
+
+  @each $color,
+  $shades in $colors {
+
+    @each $shade,
+    $value in $shades {
+      --clr-#{$color}-#{$shade}: #{$value};
+    }
+  }
+
+  @each $type-face,
+  $value in $type-faces {
+    --ff-#{$type-face}: '#{$value}';
+  }
+
+  @each $type-scale,
+  $types in $type-scales {
+
+    @each $type,
+    $value in $types {
+      --fs-#{$type-scale}-#{$type}: #{$value};
+    }
+  }
+
+  @each $weight-type,
+  $weight-scale in $weights {
+
+    @each $weight,
+    $value in $weight-scale {
+      --fw-#{$weight-type}-#{$weight}: #{$value};
+    }
+  }
+
+  --container-padding : 2.5em;
+  --border-radius : 10px
+}

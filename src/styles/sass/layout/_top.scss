@@ -1,0 +1,20 @@
+@use "../abstract/mixins" as *;
+
+.top {
+  background-image: url("../../../../public/assets/pattern-bg-desktop.png");
+
+  @include respond-to("small") {
+    background-image: url("../../../../public/assets/pattern-bg-mobile.png");
+  }
+
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  padding-top: 1em;
+}
+
+.main-header {
+  margin-bottom: 1em;
+  margin-inline: auto;
+  width: max-content;
+}

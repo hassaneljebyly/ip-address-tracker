@@ -1,0 +1,32 @@
+@use '../abstract/' as *;
+
+@each $type-face,
+$value in $type-faces {
+  .ff-#{$type-face} {
+    font-family: var(--ff-#{$type-face}),
+    sans-serif;
+  }
+}
+
+@each $type-scale,
+$types in $type-scales {
+
+  @each $type,
+  $value in $types {
+    .fs-#{$type-scale}-#{$type} {
+      font-size: var(--fs-#{$type-scale}-#{$type});
+      line-height: calc(1.5*var(--fs-#{$type-scale}-#{$type}));
+    }
+  }
+}
+
+@each $weight-type,
+$weight-scale in $weights {
+
+  @each $weight,
+  $value in $weight-scale {
+    .fw-#{$weight-type}-#{$weight} {
+      font-weight: var(--fw-#{$weight-type}-#{$weight});
+    }
+  }
+}

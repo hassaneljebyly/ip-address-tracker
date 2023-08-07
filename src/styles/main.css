@@ -1,0 +1,330 @@
+/*** The new CSS Reset - version 1.2.0 (last updated 23.7.2021) ***/
+/* Remove all the styles of the "User-Agent-Stylesheet", except for the 'display' property */
+*:where(:not(iframe, canvas, img, svg, video):not(svg *)) {
+  all: unset;
+  display: revert;
+}
+
+/* Box sizing rules */
+/* Remove default margin */
+/* Inherit fonts for inputs and buttons... */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+/* Removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+/* Revert the 'white-space' property for textarea elements on Safari */
+textarea {
+  white-space: revert;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+:root {
+  --clr-p-900: hsl(0, 0%, 17%);
+  --clr-p-800: hsl(0, 0%, 59%);
+  --clr-p-700: hsl(0, 0%, 69%);
+  --clr-p-600: hsl(0, 0%, 99%);
+  --ff-p: "Rubik";
+  --fs-p-100: clamp(0.51rem, -0.05vw + 0.52rem, 0.47rem);
+  --fs-p-200: clamp(0.64rem, -0.01vw + 0.64rem, 0.63rem);
+  --fs-p-300: clamp(0.8rem, 0.06vw + 0.79rem, 0.84rem);
+  --fs-p-400: clamp(1rem, 0.18vw + 0.96rem, 1.13rem);
+  --fs-p-500: clamp(1.25rem, 0.36vw + 1.18rem, 1.5rem);
+  --fs-p-600: clamp(1.56rem, 0.62vw + 1.44rem, 2rem);
+  --fs-p-700: clamp(1.95rem, 1.02vw + 1.75rem, 2.66rem);
+  --fs-p-800: clamp(2.44rem, 1.59vw + 2.12rem, 3.55rem);
+  --fs-p-900: clamp(3.05rem, 2.4vw + 2.57rem, 4.73rem);
+  --fw-p-regular: 400;
+  --fw-p-medium: 500;
+  --fw-p-bold: 700;
+  --container-padding: 2.5em;
+  --border-radius: 10px ;
+}
+
+.text-p-900 {
+  color: var(--clr-p-900);
+}
+
+.bg-p-900 {
+  background-color: var(--clr-p-900);
+}
+
+.text-p-800 {
+  color: var(--clr-p-800);
+}
+
+.bg-p-800 {
+  background-color: var(--clr-p-800);
+}
+
+.text-p-700 {
+  color: var(--clr-p-700);
+}
+
+.bg-p-700 {
+  background-color: var(--clr-p-700);
+}
+
+.text-p-600 {
+  color: var(--clr-p-600);
+}
+
+.bg-p-600 {
+  background-color: var(--clr-p-600);
+}
+
+.container {
+  --max-width: 1440px;
+  width: min(var(--max-width), 100% - var(--container-padding, 1em));
+  margin-inline: auto;
+}
+
+.flow > * + * {
+  margin-top: var(--flow-spacer, 0.75em);
+}
+
+.sr-only {
+  border: 0 !important;
+  clip: rect(1px, 1px, 1px, 1px) !important;
+  -webkit-clip-path: inset(50%) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important;
+  white-space: nowrap !important;
+}
+
+.ff-p {
+  font-family: var(--ff-p), sans-serif;
+}
+
+.fs-p-100 {
+  font-size: var(--fs-p-100);
+  line-height: calc(1.5 * var(--fs-p-100));
+}
+
+.fs-p-200 {
+  font-size: var(--fs-p-200);
+  line-height: calc(1.5 * var(--fs-p-200));
+}
+
+.fs-p-300 {
+  font-size: var(--fs-p-300);
+  line-height: calc(1.5 * var(--fs-p-300));
+}
+
+.fs-p-400 {
+  font-size: var(--fs-p-400);
+  line-height: calc(1.5 * var(--fs-p-400));
+}
+
+.fs-p-500 {
+  font-size: var(--fs-p-500);
+  line-height: calc(1.5 * var(--fs-p-500));
+}
+
+.fs-p-600 {
+  font-size: var(--fs-p-600);
+  line-height: calc(1.5 * var(--fs-p-600));
+}
+
+.fs-p-700 {
+  font-size: var(--fs-p-700);
+  line-height: calc(1.5 * var(--fs-p-700));
+}
+
+.fs-p-800 {
+  font-size: var(--fs-p-800);
+  line-height: calc(1.5 * var(--fs-p-800));
+}
+
+.fs-p-900 {
+  font-size: var(--fs-p-900);
+  line-height: calc(1.5 * var(--fs-p-900));
+}
+
+.fw-p-regular {
+  font-weight: var(--fw-p-regular);
+}
+
+.fw-p-medium {
+  font-weight: var(--fw-p-medium);
+}
+
+.fw-p-bold {
+  font-weight: var(--fw-p-bold);
+}
+
+.top {
+  background-image: url("../../../../public/assets/pattern-bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 30vh;
+  padding-top: 1em;
+}
+@media (max-width: 400px) {
+  .top {
+    background-image: url("../../../../public/assets/pattern-bg-mobile.png");
+  }
+}
+
+.main-header {
+  margin-bottom: 1em;
+  margin-inline: auto;
+  width: max-content;
+}
+
+.search {
+  width: 100%;
+  max-width: 557px;
+  border-radius: var(--border-radius);
+  margin-inline: auto;
+  overflow: hidden;
+}
+.search__form {
+  width: 100%;
+  display: flex;
+}
+.search__input {
+  width: 90%;
+  padding: 0.9em;
+  line-height: 0;
+}
+@media (max-width: 400px) {
+  .search__input {
+    font-size: var(--fs-p-300);
+  }
+}
+.search__button {
+  width: 10%;
+  min-width: 50px;
+  aspect-ratio: 1;
+  display: grid;
+  place-content: center;
+  transform: translateX(2px);
+  cursor: pointer;
+  transition: background-color 150ms ease-in-out;
+}
+.search__button:hover {
+  background-color: #454545;
+}
+
+.result {
+  width: 100%;
+  max-width: 1110px;
+  margin-inline: auto;
+  padding: 3em;
+  border-radius: var(--border-radius);
+  transform: translateY(calc(50% - 2em));
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+  z-index: 10;
+}
+@media (max-width: 900px) {
+  .result {
+    transform: translateY(1em);
+    padding: 1em;
+  }
+}
+.result__list {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+@media (max-width: 900px) {
+  .result__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5em;
+  }
+}
+.result__list-item:not(.result__list-item:first-child) {
+  border-left: 1px solid black;
+}
+@media (max-width: 900px) {
+  .result__list-item:not(.result__list-item:first-child) {
+    border-left: 0px;
+    text-align: center;
+  }
+}
+.result__list-item {
+  padding-inline: 1.5em;
+}
+@media (max-width: 900px) {
+  .result__list-item {
+    text-align: center;
+  }
+}
+.result__list-item p {
+  margin-top: 0.5em;
+}
+@media (max-width: 900px) {
+  .result__list-item p {
+    margin-top: 0;
+  }
+}
+
+#map {
+  min-height: 70vh;
+  background-color: beige;
+  z-index: -10;
+}
