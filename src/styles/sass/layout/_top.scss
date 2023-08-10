@@ -11,6 +11,8 @@
   background-size: cover;
   height: 30vh;
   padding-top: 1em;
+  position: relative;
+  z-index: 10;
 }
 
 .main-header {

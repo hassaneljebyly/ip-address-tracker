@@ -1,5 +1,9 @@
 #map {
   min-height: 70vh;
   background-color: beige;
-  z-index: -10;
+  z-index: 9;
+
+  &:focus {
+    z-index: 20;
+  }
 }

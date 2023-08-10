@@ -221,6 +221,8 @@ svg {
   background-size: cover;
   height: 30vh;
   padding-top: 1em;
+  position: relative;
+  z-index: 10;
 }
 @media (max-width: 400px) {
   .top {
@@ -239,7 +241,28 @@ svg {
   max-width: 557px;
   border-radius: var(--border-radius);
   margin-inline: auto;
-  overflow: hidden;
+  position: relative;
+  --display-error-span: none;
+}
+.search__error {
+  position: absolute;
+  left: -2px;
+  bottom: 0%;
+  transform: translateY(50%);
+  color: white;
+  font-style: italic;
+  background-color: red;
+  width: calc(100% + 4px);
+  padding: 1em;
+  padding-bottom: 0;
+  z-index: -1;
+  border-radius: 5px;
+  display: var(--display-error-span);
+}
+.search--error {
+  border: 2px solid red !important;
+  background-color: rgb(255, 187, 187) !important;
+  --display-error-span: block;
 }
 .search__form {
   width: 100%;
@@ -264,6 +287,8 @@ svg {
   transform: translateX(2px);
   cursor: pointer;
   transition: background-color 150ms ease-in-out;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
 }
 .search__button:hover {
   background-color: #454545;
@@ -326,5 +351,8 @@ svg {
 #map {
   min-height: 70vh;
   background-color: beige;
-  z-index: -10;
+  z-index: 9;
+}
+#map:focus {
+  z-index: 20;
 }
