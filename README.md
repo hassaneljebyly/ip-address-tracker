@@ -26,11 +26,11 @@ Users should be able to:
 
 ### Screenshot
 
-![](./design/desktop-preview.png)
+![](./design/screenshot.png)
 
 ### Links
 
-- [Solution](https://www.frontendmentor.io/solutions/article-preview-component-with-share-functionality-scss-js-postcss-F30G_rUeye)
+- [Solution](https://www.frontendmentor.io/solutions/ip-address-tracker-scss-javascript-fetchcsshtml-Jf-s8MO7sd)
 - [Live Site](https://hassaneljebyly.github.io/ip-address-tracker/public/)
 
 ### Built with

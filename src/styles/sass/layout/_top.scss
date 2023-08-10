@@ -1,10 +1,10 @@
 @use "../abstract/mixins" as *;
 
 .top {
-  background-image: url("../../../../public/assets/pattern-bg-desktop.png");
+  background-image: url("../../public/assets/pattern-bg-desktop.png");
 
   @include respond-to("small") {
-    background-image: url("../../../../public/assets/pattern-bg-mobile.png");
+    background-image: url("../../public/assets/pattern-bg-mobile.png");
   }
 
   background-repeat: no-repeat;

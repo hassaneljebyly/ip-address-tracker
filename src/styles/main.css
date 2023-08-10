@@ -216,7 +216,7 @@ svg {
 }
 
 .top {
-  background-image: url("../../../../public/assets/pattern-bg-desktop.png");
+  background-image: url("../../public/assets/pattern-bg-desktop.png");
   background-repeat: no-repeat;
   background-size: cover;
   height: 30vh;
@@ -226,7 +226,7 @@ svg {
 }
 @media (max-width: 400px) {
   .top {
-    background-image: url("../../../../public/assets/pattern-bg-mobile.png");
+    background-image: url("../../public/assets/pattern-bg-mobile.png");
   }
 }
 
